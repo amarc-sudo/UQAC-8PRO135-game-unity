@@ -3,6 +3,6 @@
 
 8PRO135 Programmation avec des moteurs de jeu
 
-* Tom PIERRE PIET08110102
+* Alexandre MIGNOT MIGA29120104
 * Aurelien MARC MARA22050108
 

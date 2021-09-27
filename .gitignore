@@ -151,3 +151,11 @@ sysinfo.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,rider
 
+/.idea/.idea.uqac.dir/.idea/.gitignore
+/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/.gitignore
+/.idea/.idea.uqac.dir/.idea/encodings.xml
+/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/encodings.xml
+/.idea/.idea.uqac.dir/.idea/indexLayout.xml
+/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/indexLayout.xml
+/.idea/.idea.uqac.dir/.idea/vcs.xml
+/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/vcs.xml
