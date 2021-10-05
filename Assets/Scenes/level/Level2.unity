@@ -249,6 +249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 2088260700}
+  end: 0
+  level2: 1
+  timeLeft: 3
 --- !u!1 &709539742
 GameObject:
   m_ObjectHideFlags: 0

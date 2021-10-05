@@ -432,7 +432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4cf537c2e2a5e4d909dc77105d2b1530, type: 2}
+  - {fileID: 2100000, guid: 0a93f91514c65433f88256dce17d87e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1310,7 +1310,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &1506484613
@@ -1341,8 +1341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2134624940}
   xOffset: 0
-  yOffset: 2
-  zOffset: 8
+  yOffset: 4
+  zOffset: 9
 --- !u!1 &1521150937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,5 +2072,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6a072e429b0494d8bd2512f1d5fdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 2134624945}
+  rb: {fileID: 0}
   moveSpeed: 13
