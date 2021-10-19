@@ -8,9 +8,8 @@ using UnityEngine.UI;
 using System;
 
 public class TestTransition
-{
+{ 
     [UnityTest]
-    
     public IEnumerator TestTransitionEndScene()
     {
         var loadSceneOperation = SceneManager.LoadSceneAsync("Assets/Scenes/level/Level4.unity");
@@ -76,5 +75,32 @@ public class TestTransition
         yield return null;
     }
     
+    
+    
+    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+    // `yield return null;` to skip a frame.
+    [UnityTest]
+    public IEnumerator SphereIsAffectByGravity() {
+        var loadSceneOperation = SceneManager.LoadSceneAsync("Assets/Scenes/level/Level2.unity");
+        loadSceneOperation.allowSceneActivation = true;
+ 
+        while (!loadSceneOperation.isDone)
+            yield return null;
+        
+        GameObject prefabRoot = GameObject.Find("Sphere");
+        prefabRoot.transform.position = new Vector3(1310.3f, 701, 0);
+        yield return new WaitForSeconds(1f);
+        Assert.AreNotEqual(prefabRoot.transform.position, new Vector3(1310.3f, 701, 0));
+    }
+    public IEnumerator TestTransitionBeetwenLevel2AndLevel3()
+    {
+        var loadSceneOperation = SceneManager.LoadSceneAsync("Assets/Scenes/level/Level2.unity");
+        loadSceneOperation.allowSceneActivation = true;
+ 
+        while (!loadSceneOperation.isDone)
+            yield return null;
+        yield return new WaitForSeconds(4f);
+        Assert.AreEqual(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "Level3");
+    }
     
 }

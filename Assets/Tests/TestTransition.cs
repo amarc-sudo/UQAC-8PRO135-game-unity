@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Hosting;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class TestScript1
 {
+    private string sceneToUnload;
+    
     // A Test behaves as an ordinary method
     [Test]
     public void TestScript1SimplePasses()
@@ -16,10 +22,12 @@ public class TestScript1
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator TestTransitionEndScene()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+    public IEnumerator TestTransitionEndScene() {
+        EditorSceneManager.OpenScene("Assets/Scenes/level/Level4.unity");
+        yield return new WaitForSeconds(3f);
+        Assert.AreEqual(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "Menu");
     }
+    
+  
 }
+
