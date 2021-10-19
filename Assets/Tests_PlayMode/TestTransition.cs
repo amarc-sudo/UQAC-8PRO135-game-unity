@@ -92,6 +92,8 @@ public class TestTransition
         yield return new WaitForSeconds(1f);
         Assert.AreNotEqual(prefabRoot.transform.position, new Vector3(1310.3f, 701, 0));
     }
+    
+    [UnityTest]
     public IEnumerator TestTransitionBeetwenLevel2AndLevel3()
     {
         var loadSceneOperation = SceneManager.LoadSceneAsync("Assets/Scenes/level/Level2.unity");
