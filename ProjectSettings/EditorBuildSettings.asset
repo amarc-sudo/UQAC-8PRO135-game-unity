@@ -14,16 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: b228900568b3a584f92010f68deeaa4f
-  - enabled: 1
-    path: Assets/Scenes/level/Level1.unity
-    guid: d50b65e76186c4210bf05132e9ec1c7b
-  - enabled: 1
-    path: Assets/Scenes/level/Level2.unity
-    guid: c206684f443b341b191951cba1e8126e
-  - enabled: 1
-    path: Assets/Scenes/level/Level3.unity
-    guid: 8a68effeec82e4912ace962390459485
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/level/Level4.unity
     guid: 57f8281731ce74d099d476da32312e42
+  - enabled: 1
+    path: Assets/Game/scene/Pacman-level.unity
+    guid: 3e697708a255d374d9d07dd7a1a7f585
   m_configObjects: {}

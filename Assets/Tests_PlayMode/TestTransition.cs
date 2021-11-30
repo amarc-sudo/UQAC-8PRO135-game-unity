@@ -44,7 +44,7 @@ public class TestTransition
         boutonplay.onClick.Invoke();
         yield return null;
         yield return new WaitForSeconds(1);
-        Assert.AreEqual(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "Level1");
+        Assert.AreEqual(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "Pacman-level");
         yield return null;
     }
     
@@ -76,7 +76,7 @@ public class TestTransition
     }
     
     
-    
+    /**
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
@@ -103,6 +103,6 @@ public class TestTransition
             yield return null;
         yield return new WaitForSeconds(4f);
         Assert.AreEqual(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "Level3");
-    }
+    }*/
     
 }
