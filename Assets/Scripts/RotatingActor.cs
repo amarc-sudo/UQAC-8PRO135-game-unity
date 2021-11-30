@@ -7,7 +7,7 @@ public class RotatingActor : MonoBehaviour
     private float z;
     
     void Start () {
-        z = 1.5f;  //velocity
+        z = 2f;  //velocity
     }
      
     void Update () {
