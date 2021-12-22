@@ -6,22 +6,9 @@ public class destroy_asteroid : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Hit");
-        if (col.gameObject.name == "Asteroid 1")
+        if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<Asteroid>().DealDamage();
         }
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
