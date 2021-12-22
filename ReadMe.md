@@ -9,11 +9,15 @@
 
 Partie 1 tp7
 
+Le bug a regler dans la console est le yolobehavior qui est a changer en monobehavior
+
 Le premier bug viens du son, en effet le son est lance plein de fois au demarage comme le demontre cela : 
 
 ![song bug](/song.png).
 
-Ce bug viens du fait qu'on fait une boucle de 400 sur le lancement du song, pour corriger cela il faut supprimer la boucle
+Ce bug viens du fait qu'on fait une boucle de 400 sur le lancement du song, pour corriger cela il faut supprimer la boucle de creation des 400 sources audio.
+
+
 
 Le deuxieme bug viens du script delay
 
