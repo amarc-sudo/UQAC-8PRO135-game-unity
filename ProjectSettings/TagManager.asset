@@ -7,6 +7,8 @@ TagManager:
   - Ghost
   - Gold
   - Coin
+  - Bullet
+  - Ship
   layers:
   - Default
   - TransparentFX
@@ -14,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Bullet
+  - Asteroid
+  - Ship
   - 
   - 
   - 
