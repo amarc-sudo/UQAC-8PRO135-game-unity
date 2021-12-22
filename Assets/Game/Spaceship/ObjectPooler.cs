@@ -28,33 +28,41 @@ public class ObjectPooler : MonoBehaviour
 
         foreach (Pool pool in pools)
         {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
+            Queue<GameObject> objectsPool = new Queue<GameObject>();
 
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject currentObject = Instantiate(pool.prefab);
                 currentObject.SetActive(false);
-                objectPool.Enqueue(currentObject);
+                objectsPool.Enqueue(currentObject);
             }
-            poolDictionary.Add(pool.tag, objectPool);
+            poolDictionary.Add(pool.tag, objectsPool);
         }
     }
 
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation, Vector3 targetPoint)
     {
-        if(poolDictionary[tag].Count != 0)
+        if(poolDictionary[tag].Count >= 2)
         {
             GameObject objectToSpawn = poolDictionary[tag].Dequeue();
-
-            objectToSpawn.SetActive(true);
-            objectToSpawn.transform.position = position;
-            objectToSpawn.transform.rotation = rotation;
+            IPooledObject objectToReturn = objectToSpawn.GetComponent<IPooledObject>();
+            objectToReturn.OnObjectSpawn(position, rotation, targetPoint);
+            //objectToSpawn.SetActive(true);
+           // objectToSpawn.transform.position = position;
+            //objectToSpawn.transform.rotation = rotation;
 
             return objectToSpawn;
         }
         else
         {
-            foreach (KeyValuePair<string, Queue<GameObject>> queue in poolDictionary)
+            GameObject objectToSpawn = Instantiate(poolDictionary[tag].Peek().gameObject);
+            IPooledObject objectToReturn = objectToSpawn.GetComponent<IPooledObject>();
+            objectToReturn.OnObjectSpawn(position, rotation, targetPoint);
+           // objectToSpawn.SetActive(true);
+           // objectToSpawn.transform.position = position;
+          //  objectToSpawn.transform.rotation = rotation;
+            return objectToSpawn;
+            /*foreach (KeyValuePair<string, Queue<GameObject>> queue in poolDictionary)
             {
                 if(queue.Value.Peek().gameObject.tag == poolDictionary[tag].Peek().tag)
                 {
@@ -65,8 +73,8 @@ public class ObjectPooler : MonoBehaviour
                     
                     return objectToSpawn;
                 }
-            }
+            }*/
         }
-        return null;
+        //return null;
     }
 }
