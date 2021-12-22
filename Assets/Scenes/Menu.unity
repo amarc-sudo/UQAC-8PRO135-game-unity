@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cc087efc65c4db2a662110c56a6c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: pacman-level
+  sceneName: Space
 --- !u!1 &924504065
 GameObject:
   m_ObjectHideFlags: 0
