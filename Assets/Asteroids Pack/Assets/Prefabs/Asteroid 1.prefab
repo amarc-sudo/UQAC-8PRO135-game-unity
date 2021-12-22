@@ -235,6 +235,8 @@ GameObject:
   - component: {fileID: 5444550}
   - component: {fileID: 11425652}
   - component: {fileID: 3138708187281354803}
+  - component: {fileID: 480411537034117070}
+  - component: {fileID: 8421623736628862746}
   m_Layer: 7
   m_Name: Asteroid 1
   m_TagString: Enemy
@@ -298,6 +300,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df909fbfde6f141fd8b1c7c24c99b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &480411537034117070
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8421623736628862746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,19 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763af30be5780b6478dab2685a2a76b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &480411537034117070
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151664}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &176588
 GameObject:
   m_ObjectHideFlags: 0
